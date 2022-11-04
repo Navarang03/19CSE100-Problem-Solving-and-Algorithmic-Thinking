@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22044"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 11:14:49 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0NDsyMDIyMjNNQVlDMDA2MTsyMDIyLTExLTA0OzEwOjU5OjA2IEFNOzMwNTg="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0NDsyMDIyMjNNQVlDMDA2MTsyMDIyLTExLTA0OzExOjE0OjQ5IEFNOzE7MzE2NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declare variable a"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the coefficient of x^2&quot;" newline="True"/>
+            <input variable="a"/>
+            <comment text="declare variable b"/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the coefficient of X&quot;" newline="True"/>
+            <input variable="b"/>
+            <comment text="declare variable c"/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the coefficent of C&quot;" newline="True"/>
+            <input variable="c"/>
+            <comment text="declare Root 1"/>
+            <declare name="Root1" type="Integer" array="False" size=""/>
+            <assign variable="Root1" expression="-b+(b^2-4*a*c)^0.5/2*a"/>
+            <comment text="declare Root2"/>
+            <declare name="Root2" type="Integer" array="False" size=""/>
+            <assign variable="Root2" expression="-b(-b^2-4*a*c)^0.5/2*a"/>
+            <output expression="&quot;Root1=&quot;&amp;Root1" newline="True"/>
+            <output expression="&quot;Root2=&quot;&amp;Root2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
