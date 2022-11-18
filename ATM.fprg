@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22044"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 11:19:27 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0NDsyMDIyMjNNQVlDMDA0ODsyMDIyLTExLTE4OzA5OjEwOjE0IEFNOzMwNjI="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0NDsyMDIyMjNNQVlDMDA0ODsyMDIyLTExLTE4OzExOjE5OjI3IEFNOzE7MzE3Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="AccNo, AccNo2, pincode, pincode2, WithAmt, minbal" type="Integer" array="False" size=""/>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="bal" type="Real" array="False" size=""/>
+            <declare name="details" type="String" array="False" size=""/>
+            <assign variable="minbal" expression="500"/>
+            <output expression="&quot;would you like to use predefined values(p) or Enter new ones(n),(p/n)&quot;" newline="True"/>
+            <input variable="details"/>
+            <if expression="details=&quot;n&quot;">
+                <then>
+                    <output expression="&quot;Enter name&quot;" newline="True"/>
+                    <input variable="name"/>
+                    <output expression="&quot;Enter Account number&quot;" newline="True"/>
+                    <input variable="AccNo"/>
+                    <output expression="&quot;Enter the pincode number&quot;" newline="True"/>
+                    <input variable="pincode"/>
+                    <output expression="&quot;Enter current balance&quot;" newline="True"/>
+                    <input variable="bal"/>
+                </then>
+                <else>
+                    <assign variable="name" expression="&quot;Navarang CD&quot;"/>
+                    <assign variable="AccNo" expression="12345678"/>
+                    <assign variable="pincode" expression="5678"/>
+                    <assign variable="bal" expression="900"/>
+                </else>
+            </if>
+            <output expression="&quot;please enter your Account Number To Continue&quot;" newline="True"/>
+            <input variable="AccNo2"/>
+            <output expression="&quot;Enter the Amound you wish to withdraw&quot;" newline="True"/>
+            <input variable="WithAmt"/>
+            <output expression="&quot;Enter the Pincode Number&quot;" newline="True"/>
+            <input variable="pincode2"/>
+            <if expression="AccNo2==AccNo">
+                <then>
+                    <if expression="Pincode2==Pincode">
+                        <then>
+                            <if expression="(bal&gt;=minbal)&amp;&amp;(bal-WithAmt)&gt;minbal">
+                                <then>
+                                    <assign variable="bal" expression="bal-WithAmt"/>
+                                    <output expression="&quot;please cullect the cash from outlet below&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="bal&lt;minbal">
+                                        <then>
+                                            <output expression="&quot;Transation error account balance below minimum balance&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Transaction error you can only withdraw$&quot;&amp;bal-500" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Transaction error you can only withdraw$&quot;&amp;bal-500" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Unknown Account&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
