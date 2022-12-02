@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22044"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 09:50:01 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA0NDsyMDIyMjNNQVlDMDA4MTsyMDIyLTEyLTAyOzA5OjM1OjI5IEFNOzMwNjY="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA0NDsyMDIyMjNNQVlDMDA4MTsyMDIyLTEyLTAyOzA5OjUwOjAxIEFNOzE7MzE2MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the value of number&quot;" newline="True"/>
+            <input variable="number"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <for variable="i" start="1" end="number" direction="inc" step="1">
+                <assign variable="sum" expression="sum+i"/>
+            </for>
+            <output expression="&quot;Sum of first n numbers&quot;&amp;sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
