@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="SHAKILA"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:58:28 AM"/>
+        <attribute name="created" value="U0hBS0lMQTtMQVBUT1AtOEJORktMRDk7MjAyMi0xMi0wOTswOTozMjozOSBBTTsyODM3"/>
+        <attribute name="edited" value="U0hBS0lMQTtMQVBUT1AtOEJORktMRDk7MjAyMi0xMi0wOTswOTo1ODoyOCBBTTsxOzI5NTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Arr" type="Integer" array="True" size="10"/>
+            <declare name="Index" type="Integer" array="False" size=""/>
+            <for variable="Index" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Enter the value for element&quot;&amp;Index+1&amp;&quot;&quot;" newline="True"/>
+                <input variable="Arr[Index]"/>
+            </for>
+            <output expression="&quot;Arr=|&quot;" newline="True"/>
+            <for variable="Index" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;&quot;&amp;Arr[Index]&amp;&quot;.&quot;" newline="False"/>
+            </for>
+            <output expression="&quot;|&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
